@@ -114,7 +114,8 @@ public class HashTable {
         }
         return true;
     }
-    public void values(){
+    public List values(){
+        List vList = new ArrayList();
         for(int i = 0; i < MAX_SIZE; i++){
             HashNode newNode = hashTable[i];
             while(newNode != null){
@@ -122,8 +123,10 @@ public class HashTable {
                 newNode = newNode.next;
             }
         }
+        return vList;
     }
-    public void keys(){
+    public List keys(){
+        List kList = new ArrayList();
         for(int i = 0; i < MAX_SIZE; i++){
             HashNode newNode = hashTable[i];
             while(newNode != null){
@@ -131,5 +134,6 @@ public class HashTable {
                 newNode = newNode.next;
             }
         }
+        return kList;
     }
 }
